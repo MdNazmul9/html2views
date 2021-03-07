@@ -7,22 +7,68 @@
  HTML forms
  </title>
 </head>
-<body>
+<body style="background-color:lightslategrey">
 
 <p> This is a simple form</p>
+
 <form action="" method="post">
 {% csrf_token %}
- <fieldset>
- <legend> Personal Information</legend>
- <label for="name">contact_name:<br></label>
- <input type="text" name="contact_name" id="name"><br> 
- <label for="email">contact_email:<br></label>
- <input type="email" name="email" id="email" required placeholder="example@example.com"><br>
- <label for="content">content:<br></label>
- <textarea name="content" rows="10" cols="30">
+
+
+
+ <!-- <fieldset style="border-color: white;"> -->
+<fieldset style="border-color: white;">
+ <legend>Receiver Personal Information</legend>
+ <label for="Rname">Consumer Name:<br></label>
+ <input type="text" name="Rname" id="Rname" ><br> 
+
+ <label for="RPhone">Phone:<br></label>
+ <input type="text" name="RPhone" id="RPhone"><br> 
+
+ <label for="Rphoto">Photo:<br></label>
+    <textarea name="Rphoto" rows="8" cols="15">
+     
+    </textarea><br>
+
+ <label for="Rcin">Consumer Identity Number (CIN):<br></label>
+ <input type="text" name="Rcin" id="Rcin"><br> 
+
+ <label for="RAddress">Address:<br></label>
+ <textarea name="RAddress" rows="5" cols="45">
  </textarea>
- <br>
- <input type="submit" value="submit">
+ <br> 
+
+ <label for="Rcountry">Receiver Country:<br></label>
+ <input type="text" name="Rcountry" id="Rcountry"><br> 
+
+
+ <label for="Rgender">Gender:<br></label>
+ <input type="text" name="Rgender" id="Rgender"><br> 
+
  </fieldset>
+
+
+ <fieldset style="border-color:white">
+    <legend > Sender Information</legend>
+    <label for="contact_names">Shopkeeper name:<br></label>
+    <input type="text" name="contact_names" id="contact_names"><br> 
+
+    <label for="CommissionSending">Commission Giving Amount:<br></label>
+    <input type="text" name="CommissionSending" id="CommissionSending"><br> 
+
+    <label for="totalSaleAmt">Total Sale Amount:<br></label>
+    <input type="text" name="totalSaleAmt" id="totalSaleAmt"><br> 
+
+
+    <label for="email">contact_email:<br></label>
+    <input type="email" name="emails" id="emails" required placeholder="example@example.com"><br>
+    <label for="contents">Product Details:<br></label>
+    <textarea name="contents" rows="5" cols="45">
+    </textarea>
+    <br> <br> 
+    <input type="submit" value="submit">
+    </fieldset>
+
+
  </body>
  </html>
