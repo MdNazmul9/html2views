@@ -6,6 +6,12 @@ from .forms import SendingInfoForm
 
 
 def infoCreate(request):
+    #print(request.GET)
+    # print(request.POST["email"])
+    if request.method=="POST":
+        x = request.POST.get('email')
+        print(x)
+        # Person.objects.create(email=x)
 
     context = {
        
