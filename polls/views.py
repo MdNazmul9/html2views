@@ -3,6 +3,16 @@ import json
 from .models import SendingInfo
 from .forms import SendingInfoForm, RawSendingInfoForm
 
+def infoCreate(request):
+    form = SendingInfoForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        form = SendingInfoForm()
+
+    context = {
+        "form": form
+    }
+    return render(request, "Createinfo.html", context)
 
 
 
