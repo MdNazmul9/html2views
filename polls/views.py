@@ -6,19 +6,19 @@ from .forms import SendingInfoForm, RawSendingInfoForm
 
 
 
-def infoCreate(request):
-    my_form = RawSendingInfoForm()
-    if request.method == "POST":
-        my_form = RawSendingInfoForm(request.POST)
-        print(my_form.cleaned_data)
-        SendingInfo.objects.create(**my_form.cleaned_data)
-    else:
-        print(my_form.errors)
+# def infoCreate(request):
+#     my_form = RawSendingInfoForm()
+#     if request.method == "POST":
+#         my_form = RawSendingInfoForm(request.POST)
+#         print(my_form.cleaned_data)
+#         #SendingInfo.objects.create(**my_form.cleaned_data)
+#     else:
+#         print(my_form.errors)
 
-    context = {
-        "form": my_form
-    }
-    return render(request, "Createinfo.html", context)
+#     context = {
+#         "form": my_form
+#     }
+#     return render(request, "Createinfo.html", context)
          
 
 

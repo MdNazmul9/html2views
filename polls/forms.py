@@ -8,6 +8,17 @@ class SendingInfoForm(forms.ModelForm):
 
 
 class  RawSendingInfoForm(forms.Form):
-    title = forms.CharField()
-    description = forms.CharField()
-    price = forms.DecimalField()
+    title = forms.CharField(label="Title", widget=forms.TextInput(attrs={"placeholder": "Enter your title"}))
+    description = forms.CharField(
+        required=False,
+        widget=forms.Textarea(
+            attrs={
+                "class": "new-class-name two",
+                "rows":10,
+                "column":30
+
+
+            }
+        )
+    )
+    price = forms.DecimalField(initial=20.00)
