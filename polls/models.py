@@ -4,7 +4,9 @@ from django.conf import settings
 
 # Create your models here.
 class SendingInfo(models.Model):
-    email = models.CharField(max_length=64)
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    price = models.DecimalField(max_digits=18, decimal_places=2)
     # Rname = models.CharField(max_length=255)
     # RPhone = models.CharField(max_length=32)
     # #Rphoto = models.ImageField()
