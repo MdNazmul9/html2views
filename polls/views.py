@@ -17,6 +17,19 @@ def infoCreate(request):
 
 
 # def infoCreate(request):
+#     form = SendingInfoForm(request.POST or None)
+#     if form.is_valid():
+#         form.save()
+#         form = SendingInfoForm()
+
+#     context = {
+#         "form": form
+#     }
+#     return render(request, "Createinfo.html", context)
+
+
+
+# def infoCreate(request):
 #     my_form = RawSendingInfoForm()
 #     if request.method == "POST":
 #         my_form = RawSendingInfoForm(request.POST)
