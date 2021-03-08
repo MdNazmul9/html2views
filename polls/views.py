@@ -4,7 +4,11 @@ from .models import SendingInfo
 from .forms import SendingInfoForm, RawSendingInfoForm
 
 def infoCreate(request):
-    form = SendingInfoForm(request.POST or None)
+    initial_data = {
+        "title": "md nazmul hossain"
+    }
+    obj = SendingInfo.objects.get(id=4)
+    form = SendingInfoForm(request.POST or None,initial=initial_data, instance=obj)
     if form.is_valid():
         form.save()
         form = SendingInfoForm()
